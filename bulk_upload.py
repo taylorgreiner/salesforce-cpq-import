@@ -71,7 +71,7 @@ for order_num, subs in orders.items():
 
                 sf.SBQQ__Subscription__c.create(sub_data)
             except Exception as sub_err:
-                print(f"⚠️ Failed to create subscription for order {order_num}: {sub_err}")
+                print(f"Failed to create subscription for order {order_num}: {sub_err}")
         
         print(f"Finished creating {len(subs)} subscriptions for contract {contract_id}")
 
